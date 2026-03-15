@@ -1,0 +1,31 @@
+# unzip-riscos
+
+Extract ZIP files preserving RISC OS filetypes as NFS-encoded `,xxx` suffixes.
+
+Uses Go's `archive/zip` (supports Stored and Deflate compression) and renames extracted files by appending `,xxx` suffixes based on RISC OS Info-ZIP extra fields (signature `0x4341` `'AC'`). Directories are detected by trailing slash and not renamed.
+
+## Usage
+
+```
+unzip-riscos [-v] <zipfile> [<zipfile> ...] <destdir>
+```
+
+| Flag | Description |
+|------|-------------|
+| `-v` | Verbose output |
+
+## Installation
+
+Download a pre-built binary for your platform from the [Releases](https://github.com/david-ramsden/unzip-riscos/releases) page.
+
+## Building from source
+
+Requires Go 1.22 or later.
+
+```sh
+CGO_ENABLED=0 go build -o unzip-riscos .
+```
+
+## License
+
+See [LICENSE](LICENSE).
