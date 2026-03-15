@@ -22,9 +22,12 @@ Download a pre-built binary for your platform from the [Releases](https://github
 
 Requires Go 1.22 or later.
 
-```sh
-CGO_ENABLED=0 go build -o unzip-riscos .
-```
+| Target | Description |
+|--------|-------------|
+| `make` | Build binary for the current platform |
+| `make test` | Run tests |
+| `make dist` | Cross-compile binaries for all platforms |
+| `make clean` | Remove built binaries |
 
 ## License
 
