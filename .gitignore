@@ -1,0 +1,12 @@
+# Binary output
+unzip-riscos
+unzip-riscos-*-*
+unzip-riscos-*.exe
+
+# Go build cache
+/vendor/
+
+# Test output
+*.test
+*.out
+coverage.txt
