@@ -1,5 +1,8 @@
 # unzip-riscos
 
+[![CI](https://github.com/david-ramsden/unzip-riscos/actions/workflows/ci.yml/badge.svg)](https://github.com/david-ramsden/unzip-riscos/actions/workflows/ci.yml)
+[![Release](https://github.com/david-ramsden/unzip-riscos/actions/workflows/release.yml/badge.svg)](https://github.com/david-ramsden/unzip-riscos/actions/workflows/release.yml)
+
 Extract ZIP files preserving RISC OS filetypes as NFS-encoded `,xxx` suffixes.
 
 Uses Go's `archive/zip` (supports Stored and Deflate compression) and renames extracted files by appending `,xxx` suffixes based on RISC OS Info-ZIP extra fields (signature `0x4341` `'AC'`). Directories are detected by trailing slash and not renamed.
